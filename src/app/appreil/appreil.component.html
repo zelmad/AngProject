@@ -4,5 +4,13 @@
                 'list-group-item-info': appareilSatus === 'alu'}">
   <div style="width: 10px; height: 10px; background-color: red;" *ngIf="getStatus()==='éteint'"></div>
     <h4 [ngStyle]="{color : getColor()}">Appareil : {{ appareilName }} -- status : {{ getStatus() }}</h4>
+    &nbsp;
+    <a [routerLink]="[id]">Détail</a>
     <input type="text" class="form-control" [(ngModel)]="appareilName">
+  <button class="btn btn-success"
+          *ngIf="appareilSatus === 'éteint'"
+          (click)="onSwitch()">allumer</button>
+  <button class="btn btn-danger"
+          *ngIf="appareilSatus === 'allumé'"
+          (click)="onSwitch()">éteindre</button>
 </li>
