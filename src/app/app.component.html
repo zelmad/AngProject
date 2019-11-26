@@ -16,10 +16,10 @@
     </div>
   </div>
 </nav>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+<div class="navbar-right">
+  <p>Vous êtes connecté depuis {{secondes}} secondes !</p>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-danger" (click)="ngOnDestroy()">éteindre</button>
 </div>
+<router-outlet></router-outlet>
+
