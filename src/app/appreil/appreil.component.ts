@@ -18,9 +18,9 @@ export class AppreilComponent implements OnInit {
   }
   onSwitch() {
     if (this.appareilSatus === 'allumé') {
-      this.appareilService.switchOffAll(this.index);
+      this.appareilService.switchOffOne(this.index);
     } else if (this.appareilSatus === 'éteint') {
-      this.appareilService.switchOnAll(this.index);
+      this.appareilService.switchOnOne(this.index);
     }
   }
   getStatus() {
